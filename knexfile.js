@@ -12,3 +12,7 @@ module.exports = {
   }
 };
 
+migrations: {
+tableName: 'knex_migration',
+directory `${__dirname}/src/database`
+}; 
