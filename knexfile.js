@@ -1,5 +1,5 @@
-// Update with your config settings.
 
+const path= require('path')
 module.exports = {
 
   development: {
@@ -8,11 +8,12 @@ module.exports = {
       database: "agrovec",
       user:"postgres",
       password: "admin"
+    }, 
+    migrations:{ 
+      tableName: 'knex_migrations',
+      directory: path.resolve(__dirname, 'src', 'database', 'migrations')
     }
   }
 };
 
-migrations: {
-tableName: 'knex_migration',
-directory `${__dirname}/src/database`
-}; 
+
